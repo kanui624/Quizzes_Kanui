@@ -5,7 +5,7 @@ class MainPageController < ApplicationController
   end 
 
   def kanui
-    @feel = Feel.find params[:id]
+    @feel = Feel.all
   end
 
 end
