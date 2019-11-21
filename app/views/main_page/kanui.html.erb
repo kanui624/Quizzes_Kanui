@@ -59,5 +59,69 @@
     <br />
     <br />
     <br />
+
+      
+    <div class="modal_button" align="center">      
+    <!-- Button trigger modal -->
+      <button type="button" class="btn btn-secondary btn-xs" style="margin: auto"data-toggle="modal" data-target="#myModal">
+        $
+      </button>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">-</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel"></h4>
+          </div>
+            <div class="modal-body">
+              <%= simple_form_for @feel, url: feels_path do |f| %>
+              <%= f.input :thought %>
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">n</button>
+            <%= f.submit "y", class: 'btn btn-secondary' %>
+          </div>
+         <% end %>
+        </div>
+      </div>
+    </div> 
+
+  <br />
+  <br />
+  <br />
+  <br />
+ <hr class="line">
+  <br />
+  <br />
+  <br />
+  <br />
+
+<div class="thoughts">
+  <% @feel = Feel.all %>
+  <% @feel.each do |thot| %>
+    <div>
+      <blockquote>
+        <%= thot.thought %>
+      </blockquote>
+    </div>
+  <% end %>
+</div>
+
+  <br />
+  <br />
+  <br />
+  <br />
+ <hr class="line">
+  <br />
+  <br />
+  <br />
+  <br />
+
   </body>
 </html>

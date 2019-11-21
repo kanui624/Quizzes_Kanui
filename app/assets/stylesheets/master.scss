@@ -56,6 +56,13 @@ h3 {font-size: 20px;
            font-family: Courier New Header;}
 
 
+.modal_button {transition: transform .3s;}
+
+.modal_button:hover {transform: scale(1.25);}
+
+.thoughts {text-align: center;
+           color: white;
+           font-family: unset;}
 
 
 

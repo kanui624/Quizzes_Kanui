@@ -1,12 +1,4 @@
-class MainPageController < ApplicationController
-
-  def index
-    @feel = Feel.all
-  end 
-
-  def kanui
-    @feel = Feel.new
-  end
+class FeelsController < ApplicationController
 
   def create 
     Feel.create(feel_params)
