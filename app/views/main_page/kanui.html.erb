@@ -79,10 +79,10 @@
             </button>
             <h4 class="modal-title" id="myModalLabel"></h4>
           </div>
-            <div class="modal-body">
+            
               <%= simple_form_for @feel, url: feels_path(@feel) do |f| %>
               <%= f.input :thought %>
-            </div>
+            
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">n</button>
             <%= f.submit "y", class: 'btn btn-secondary' %>
